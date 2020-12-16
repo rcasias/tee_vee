@@ -12,13 +12,11 @@ class Network
    end
 
    def main_characters
-     main_character = []
-     @shows.map do |show|
-       show.map do |character|
-         character.name
-       end
+     character_list = []
+     @shows.each do |show|
+       character_list << show.characters
      end
-     character
+     character_list
    end
 
    def actors_by_show
