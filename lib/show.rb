@@ -19,18 +19,19 @@ class Show
   end
 
   def highest_paid_actor
-    characters.each do |character|
-      if character.salary > character.salary
-        character.name
-      end
+    hight_paid = []
+    @characters.each do |character|
+      hight_paid << character.salary
     end
-    character.name
+    hight_paid.max
   end
 
   def actors
-    characters.each do |character|
-      character.actor
+    actor = []
+    @characters.each do |character|
+      actor << character.actor
     end
+    actor
   end
 
 

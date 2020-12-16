@@ -1,6 +1,8 @@
 class Network
+    attr_reader :name,
+                :shows
 
-   def initialize(network)
+   def initialize(name)
      @name = name
      @shows = []
    end
@@ -10,7 +12,13 @@ class Network
    end
 
    def main_characters
-     @shows.chartacters.name
+     main_character = []
+     @shows.map do |show|
+       show.map do |character|
+         character.name
+       end
+     end
+     character
    end
 
    def actors_by_show
